@@ -4,8 +4,7 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+
 
 
 def post_list(request):
@@ -48,12 +47,3 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
 
-def signup(request):
-  if request.method == 'POST':
-    form = UserCreationForm(request.POST)
-    if form.is_valid():
-      form.save()
-    return redirect('index')
-  else:
-    form = UserCreationForm()
-    return render(request, 'signup.html', {'form': form})

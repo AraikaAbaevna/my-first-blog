@@ -9,13 +9,15 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Добро пожаловать, Арайка</a></h1>
-        </div>
-        <div class="page-header">
+           
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
-            <p><a href="/">Здесь ты можешь писать все что ты хочешь, например поделиться своими секретами или же написать планы на завтра </a></p>
+         <h1 style="margin-left:300px;">Добро пожаловать, Арайка</a></h1>
+        </div>
+        <div>
+            <p style="background-color:#D114F4;font-size:20px;font-family:cursive;color:#14F4F1; margin:50px;"">Здесь ты можешь писать все что ты хочешь, 
+                например поделиться своими секретами или же написать планы на завтра </a></p>
         </div>
         <div class="content container">
             <div class="row">
